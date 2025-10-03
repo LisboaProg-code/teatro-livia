@@ -1,0 +1,116 @@
+Cortinas
+    cortinas feitas
+    sem animação ainda
+    sem possibilidade de abrir
+
+css
+
+
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: black; /* fundo do palco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+}
+
+.conteiner_cortinas{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 1px;
+    align-items: center;
+}
+
+.pano{
+    width: 50%;
+    height: 100vh;
+    background: repeating-linear-gradient(
+    to bottom,
+    #b30000 0%,
+    #800000 10%,
+    #b30000 20%
+    ); /* listras verticais como dobras do pano */
+    box-shadow: inset -20px 0 40px rgba(0,0,0,0.5);
+    transition: transform 2.5s ease-in-out;
+}
+
+.pano.esquerda{
+    transform: translateX(0);
+    border-bottom-right-radius: 200px 100px;
+}
+
+.pano.direita{
+    transform: translateX(0);
+    border-bottom-left-radius: 200px 100px;
+}
+
+/* quando abre, deslizam */
+.conteiner_cortinas.aberta .pano.esquerda{
+    transform: translateX(-100%);
+}
+.conteiner_cortinas.aberta .pano.direita{
+    transform: translateX(100%);
+}
+
+
+/* Texto do palco */
+.palco-texto{
+    position: absolute;
+    color: gold;
+    font-size: 2.8rem;
+    font-family: "Georgia", serif;
+    opacity: 0;
+    text-shadow: 2px 2px 5px black;
+    transition: opacity 2s ease-in-out;
+}
+
+.conteiner_cortinas.aberta + .palco-texto{
+    opacity: 1;
+}
+
+/* Botão */
+.botao{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    background: gold;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+.botao:hover{
+    background: orange;
+}
+
+---------------------------------------------------------
+
+1°pag sobre oq é a peça
+2°pag horário, lugar, data
+3°pag convite, com sim e nao
+    botao de nao vai ser impossivel de ser clicado LAKLAKLAKAKAKA
+    botao de sim    
+        vai subir a plateia aplaudindo, com audio de aplausos
+        fogos de artificios na tela 
+        

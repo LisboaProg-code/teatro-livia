@@ -209,7 +209,7 @@ body {
   font-family: "Georgia", serif;
   z-index: 30;
   perspective: 1200px;
-  opacity: 1;
+  opacity: 0;
 }
 
 .pagina{
@@ -377,6 +377,10 @@ body {
     width: 50%;
   }
 
+  .conteiner-palco{
+    overflow: hidden;
+  }
+
   .palco img{
     width: 200%;
     transform: translateY(40%);
@@ -433,20 +437,8 @@ body {
     cursor: pointer;
   }
 
-  /* ---cilindro nas pag--- */
-
-  .cilindro{
-    position: absolute;
-    left: 0; 
-    top: 0%;
-    height: 100%;
-    width: 15px;
-    background-color: whitesmoke;
-    z-index: 10; 
-    border-radius: 5px;
-    transform: translateX(-10%);
-    box-shadow: 3px 3px 7px 2px rgba(0,0,0,0.3);
-    filter: blur(10%);
+  #fogos {
+    z-index: 40;
   }
 
 }

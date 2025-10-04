@@ -339,6 +339,12 @@ body {
   cursor: pointer;
 }
 
+#EladisseSim{
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #730220;
+}
+
 /* ---cilindro nas pag--- */
 
 .cilindro{
@@ -373,8 +379,23 @@ body {
 
 @media screen and (max-width: 600px) {
   
+  .botao{
+    padding: 15px 10px;
+    font-size: 1rem;
+  } 
+
   .holofote_center, .holofote_left,.holofote_right{
-    width: 50%;
+    width: 30%;
+  }
+
+  .holofote_right{
+    transform: translateX(-40%);
+    rotate: 10deg;
+  }
+
+  .holofote_left{
+    rotate: -10deg;
+    transform: translateX(40%);
   }
 
   .conteiner-palco{
@@ -383,12 +404,12 @@ body {
 
   .palco img{
     width: 200%;
-    transform: translateY(40%);
+    transform: translateY(40vw);
     transition: transform 1s ease-in-out;
   }
 
   #img.subir {
-    transform: translateY(0%);
+    transform: translateY(0vw);
   }
 
   /* roteiro */

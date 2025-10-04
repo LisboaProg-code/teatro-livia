@@ -1,7 +1,9 @@
 function abrirCortina(){
+    cortina = document.getElementById("cortinas")
     document.getElementById("cortinas").classList.add("aberta");
     let botao = document.getElementById('btn')
     botao.style.display = 'none'
+    cortina.style.display = "none"
 
     let roteiro = document.getElementById("roteiro")
     roteiro.style.transition = 'opacity 10s ease'

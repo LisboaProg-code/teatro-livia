@@ -24,22 +24,15 @@ body {
 .pano {
   width: 50%;
   height: 100vh;
-
-  /* Dobras do tecido (listras verticais em vermelho claro/escuro) */
   background: repeating-linear-gradient(
     to right,
     #730220 0px,
     #8c0738 20px,
     #730220 40px
   );
-
-  /* Sombra para dar profundidade */
   box-shadow: inset -30px 0 40px rgba(0,0,0,0.6);
   transition: transform 3s ease-in-out;
 }
-
-/* Ajustes individuais */
-
 
 .pano.direita {
   box-shadow: inset 30px 0 40px rgba(0,0,0,0.6);
@@ -307,17 +300,21 @@ body {
 }
 
 .pagina4 h1{
-  font-family: "Gotu", Georgia, 'Times New Roman', Times, serif;
-
+  font-family: "Poppins", Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .convite-texto{
-  line-height: 6rem;
+  line-height: 4rem;
 }
 
 .conteiner_button{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
 }
 
 .button_sim{
@@ -386,10 +383,12 @@ body {
 @media screen and (max-width: 600px) {
   
   .botao{
-    padding: 15px 10px;
-    font-size: 1rem;
-  } 
-
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+  }
+  
   .holofote_center, .holofote_left,.holofote_right{
     width: 30%;
   }
@@ -410,18 +409,19 @@ body {
 
   .palco img{
     width: 200%;
-    transform: translateY(40vw);
+    transform: translateY(30vh);
     transition: transform 1s ease-in-out;
   }
 
   #img.subir {
-    transform: translateY(0vw);
+    transform: translateY(10vh);
   }
 
   /* roteiro */
 
   .conteiner_roteiro{
-    width: 80%;
+    width: 90%;
+    left: 50%;
   }
 
   .pagina1 img{
@@ -434,12 +434,13 @@ body {
 
   .convite-texto h1{
     transform: translateX(2%);
+    font-size: 1.5rem;
   }
 
   .conteiner_button{
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
   }
 
   .button_sim{

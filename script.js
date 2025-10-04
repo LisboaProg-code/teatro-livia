@@ -1,15 +1,22 @@
 function abrirCortina(){
-    cortina = document.getElementById("cortinas")
     document.getElementById("cortinas").classList.add("aberta");
     let botao = document.getElementById('btn')
     botao.style.display = 'none'
-    cortina.style.display = "none"
-
+    
     let roteiro = document.getElementById("roteiro")
     roteiro.style.transition = 'opacity 10s ease'
     roteiro.style.opacity = "1"
 
+    function fecharCortinaDepois(ms) {
+      setTimeout(() => {
+        cortinas.style.display = "none";
+      }, ms);
+    }
+    
+    fecharCortinaDepois(3000); // 5000 ms = 5 segundos
 }
+let cortinas = document.getElementById("cortinas")
+
 
 const paginas = document.querySelectorAll('.conteiner_roteiro .pagina');
 let atual = 0;
@@ -50,7 +57,6 @@ document.addEventListener('keydown', e => {
 
 /* button */
 
-let btnSim = document.getElementById('sim')
 let btnNao = document.getElementById('nao')
 
 let fogos = [];
@@ -60,9 +66,9 @@ let animandoFogos = false;
 // Plateia + música + fogos
 function Sim(){
   document.getElementById("img").classList.toggle("subir");
-  elaDisseSim = document.getElementById("ElaDisseSim")
+  elaDisseSim = document.getElementById("EladisseSim")
 
-  EladisseSim.style.display = 'block'
+  elaDisseSim.style.display = "block"
 
   let audio = document.getElementById("musica");
   audio.play();

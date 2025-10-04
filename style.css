@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -26,9 +28,9 @@ body {
   /* Dobras do tecido (listras verticais em vermelho claro/escuro) */
   background: repeating-linear-gradient(
     to right,
-    #a60000 0px,
-    #cc0000 20px,
-    #a60000 40px
+    #730220 0px,
+    #8c0738 20px,
+    #730220 40px
   );
 
   /* Sombra para dar profundidade */
@@ -122,26 +124,6 @@ body {
 }
 
 
-/* Texto do palco */
-.palco-texto{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: gold;
-  font-size: 2.8rem;
-  font-family: "Georgia", serif;
-  opacity: 0;
-  text-shadow: 2px 2px 5px black;
-  transition: opacity 2s ease-in-out;
-  z-index: 10;
-}
-
-.conteiner_cortinas.aberta ~ .palco-texto{
-  opacity: 1;
-}
-
-
 /* palco */
 
 .conteiner-palco{
@@ -183,7 +165,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   padding: 12px 20px;
-  background: gold;
+  background: #730220;
+  color: #bf6b92;
   border: none;
   border-radius: 10px;
   font-size: 1.1rem;
@@ -194,7 +177,7 @@ body {
   z-index: 20;
 }
 .botao:hover{
-    background: orange;
+    background: #440113;
 }
 
 /* roteiro */
@@ -246,25 +229,29 @@ body {
 }
 
 .pagina1 h1{
-  font-size: 2.3rem;
-  font-weight: 200;
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-style: italic;
+  font-family: "Poppins", Georgia, 'Times New Roman', Times, serif;
 }
 
 .pagina1 p{
   font-size: .8rem;
   text-align: center;
   transform: translateX(-1%);
+  font-style: italic;
 }
 
 .pagina{
   width: 100%;
   height: 100%;
-  background: white;
+  background: #bf6b92;
+  color: #440113;
   position: absolute;
   top: 0;
   left: 0;
   backface-visibility: hidden;
-  border: 1px solid #ccc;
+  border: 1px solid #f889bd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,29 +270,45 @@ body {
 }
 
 .texto-pag h1{
-  font-weight: 200;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2.1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .texto-pag p{
   font-size: .9rem;
+  font-weight: 400;
+  font-family: "Poppins", Georgia, 'Times New Roman', Times, serif;
+  padding-left: 10px;
 }
 
 .conteiner_roteiro .pagina3{ 
   z-index: 4;
-  line-height: 5rem;
+  line-height: 4rem;
 }
 
 .texto-pag2 h1{
-  font-weight: 200;
+  font-weight: 400;
+  font-family: "Gotu", Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
 }
 
 .texto-pag2 p{
   font-size: 1.2rem;
+  font-family: "Gotu", Georgia, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  padding-left: 20px;
 }
 
 .conteiner_roteiro .pagina4{ 
   z-index: 3;
   flex-flow: column;
+}
+
+.pagina4 h1{
+  font-family: "Gotu", Georgia, 'Times New Roman', Times, serif;
+
 }
 
 .convite-texto{
@@ -318,7 +321,8 @@ body {
 }
 
 .button_sim{
-  background-color: green;
+  background-color: #2F5941;
+  color: #010D00;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,10 +330,11 @@ body {
   padding: 15px;
   border-radius: 10px;
   cursor: pointer;
+  font-family: "Gotu", Georgia, 'Times New Roman', Times, serif;
 }
 
 .button_nao{
-  background-color: red;
+  background-color: #BF0B2C;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,8 +346,9 @@ body {
 
 #EladisseSim{
   font-size: 1.2rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "Gotu", Georgia, 'Times New Roman', Times, serif;
   color: #730220;
+  display: none;
 }
 
 /* ---cilindro nas pag--- */
@@ -353,7 +359,7 @@ body {
   top: 0%;
   height: 100%;
   width: 15px;
-  background-color: whitesmoke;
+  background-color: #bf6b92;
   z-index: 10; 
   border-radius: 5px;
   transform: translateX(-10%);
@@ -437,7 +443,6 @@ body {
   }
 
   .button_sim{
-    background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -448,7 +453,6 @@ body {
   }
 
   .button_nao{
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;

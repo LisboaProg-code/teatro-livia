@@ -60,6 +60,9 @@ let animandoFogos = false;
 // Plateia + música + fogos
 function Sim(){
   document.getElementById("img").classList.toggle("subir");
+  elaDisseSim = document.getElementById("ElaDisseSim")
+
+  EladisseSim.style.display = 'block'
 
   let audio = document.getElementById("musica");
   audio.play();
